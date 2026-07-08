@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ Agent Maxxing
+#  Agent Maxxing
 
 > **95+ production-ready skills, 19 UI components, and 7 system prompts extracted from the world's best AI agents.** Drop them into any agent — Claude Code, Codex, Cursor, OpenCode — and it instantly becomes elite.
 
