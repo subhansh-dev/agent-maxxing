@@ -359,7 +359,9 @@ When your agent reads this file, it knows:
 
 ### Permanent Integration (Recommended)
 
-Add this to your agent's system prompt, `CLAUDE.md`, or `AGENTS.md`:
+**If your agent loads `CLAUDE.md` on every session (OpenCode, MimoCode, Claude Code, Cursor, or any agent that reads a config/rules file at startup) — add the integration block there. This is the most reliable method. The agent will know about agent-maxxing on EVERY prompt, no plugin needed.**
+
+Add this to `CLAUDE.md`, `AGENTS.md`, or your agent's equivalent config file:
 
 ```markdown
 ## Agent Maxxing Skills
@@ -400,6 +402,56 @@ Agent: *reads frontend-design/01-FRONTEND-DESIGN/SKILL.md*
 Agent: *reads components/data-table/SKILL.md*
 Agent: *builds the dashboard following the skill patterns*
 ```
+
+### CLAUDE.md Integration (Best Method for Any Agent)
+
+Any agent that loads `CLAUDE.md` on every session — **OpenCode, MimoCode, Claude Code, Cursor, or similar** — should add the integration block there. This ensures the agent starts every session fully maxxed.
+
+Add this to `~/.claude/CLAUDE.md` (Claude Code) or your agent's equivalent config file:
+
+```markdown
+## Agent Maxxing Skills
+
+You have 95+ skills at ~/.opencode/skills/agent-maxxing/ (adjust path for your agent).
+
+Before EVERY response:
+1. Check if an anti-pattern is present in your output → remove it
+2. Check if a relevant skill exists → load it if so
+3. Check if you're hedging → remove the hedge
+4. Check if you're over-explaining → cut to the point
+5. Check if you're asking when you should be doing → just do it
+
+Always apply: engineering/anti-patterns/SKILL.md before writing code.
+Always follow: engineering/execution-protocol/SKILL.md (solve it, don't ask about it).
+Sound human, not like a bot.
+
+### Quick Skill Reference
+- Frontend: frontend-design/01-FRONTEND-DESIGN/SKILL.md
+- Code Review: engineering/deep-code-review/SKILL.md
+- Writing: content/writing-style/SKILL.md
+- Anti-Patterns: engineering/anti-patterns/SKILL.md
+- Execution: engineering/execution-protocol/SKILL.md
+- Personality: system-prompts/01-agent-core-personality/SKILL.md
+- Tone: system-prompts/06-tone-communication/SKILL.md
+
+Golden Rules:
+1. Search before answering
+2. Read the codebase first
+3. Parallel tool calls
+4. Match existing patterns
+5. Show don't tell
+6. Be concise
+7. Take ownership
+8. Respect user's time
+9. Ship working code
+10. Sound human
+```
+
+This is the most reliable method — the plugin bootstrap is a fallback, but having it in CLAUDE.md means every session starts with the full integration loaded.
+
+### OpenCode / MimoCode / CLAUDE.md Agents
+
+If your agent loads `CLAUDE.md` on every session (OpenCode, MimoCode, Claude Code, Cursor, etc.), it is recommended to integrate agent-maxxing into CLAUDE.md first, then fine-tune. This way the agent knows about all 95+ skills on every prompt without needing a plugin.
 
 ### Creating Your Own Skills
 
