@@ -489,10 +489,30 @@ description: One-line description of what this skill does
 
 ## 💡 P.S. — The Lazy Prompt
 
-Don't want to read through all of that? Just copy-paste this prompt to your agent and let it figure itself out:
+Don't want to read through all of that? Pick whichever prompt fits your situation:
+
+### Quick Prompt (just reads and internalizes)
 
 ```
 Deep dive into the agent-maxxing folder at ~/.claude/skills/agent-maxxing (or wherever you installed it). Read every .md file — every skill, every system prompt, every component, every workflow example. Understand what each file teaches. Then fine-tune yourself: adopt the patterns, internalize the anti-patterns, apply the engineering judgment, use the writing style. Integrate all 95+ skills so you can use them on any task. From now on, before responding to anything, check if a relevant skill exists and apply it. You are no longer a generic agent — you are maxxed.
+```
+
+### Fine-Tune Prompt (behavior transformation — the real magic)
+
+**[Open PROMPT-FINE-TUNE.md on GitHub](https://github.com/subhansh-dev/agent-maxxing/blob/main/PROMPT-FINE-TUNE.md)** — copy the prompt from there.
+
+This is NOT an installation prompt. Use this AFTER the skills are already installed. It forces your agent to internalize the patterns and change how it actually operates on every response. 10 steps: read each core file, confirm you loaded it, demonstrate the behavior change.
+
+### Full Integration Prompt (install + configure + internalize)
+
+**[Open PROMPT-INTEGRATE.md on GitHub](https://github.com/subhansh-dev/agent-maxxing/blob/main/PROMPT-INTEGRATE.md)** — copy the prompt from there.
+
+7 phases: detect platform → locate/clone → install skills → configure permanent integration → self-fine-tune → verify → confirm. Works for Claude Code, Codex, OpenCode, Cursor, Continue, and Kilo Code.
+
+### Ultra-Short Prompt (for context-limited agents)
+
+```
+Read FINE-TUNE-AGENT.md in the agent-maxxing skills folder. Follow its self-fine-tune protocol. Internalize anti-patterns, execution protocol, and writing style. From now on, check for relevant skills before every task.
 ```
 
 That's it. One prompt. Your agent reads everything, learns the patterns, and starts applying them. It won't be perfect (context windows have limits), but it'll be noticeably better.
