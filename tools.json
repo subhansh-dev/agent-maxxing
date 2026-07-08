@@ -1,0 +1,95 @@
+{
+  "_note": "Supported AI coding agents and their install paths. Used by catalog tools and installation scripts.",
+  "tools": {
+    "claude-code": {
+      "label": "Claude Code",
+      "short": "Claude",
+      "accent": "#D97757",
+      "installPath": "~/.claude/skills/",
+      "format": "markdown",
+      "detect": [".claude"],
+      "docs": "https://docs.anthropic.com/en/docs/claude-code/skills"
+    },
+    "codex": {
+      "label": "Codex CLI",
+      "short": "Codex",
+      "accent": "#10A37F",
+      "installPath": "~/.codex/skills/",
+      "format": "markdown",
+      "detect": [".codex"],
+      "docs": "https://developers.openai.com/codex/skills"
+    },
+    "opencode": {
+      "label": "OpenCode",
+      "short": "OpenCode",
+      "accent": "#FF6B35",
+      "installPath": "~/.opencode/skills/",
+      "format": "markdown",
+      "detect": [".opencode"],
+      "docs": "https://opencode.ai"
+    },
+    "cursor": {
+      "label": "Cursor",
+      "short": "Cursor",
+      "accent": "#1F2430",
+      "installPath": ".cursor/skills/",
+      "format": "markdown",
+      "detect": [".cursor"],
+      "docs": "https://docs.cursor.com/context/skills"
+    },
+    "continue": {
+      "label": "Continue",
+      "short": "Continue",
+      "accent": "#6366F1",
+      "installPath": ".continue/skills/",
+      "format": "markdown",
+      "detect": [".continue"],
+      "docs": "https://docs.continue.dev"
+    },
+    "kilo": {
+      "label": "Kilo Code",
+      "short": "Kilo",
+      "accent": "#F97316",
+      "installPath": ".kilocode/skills/",
+      "format": "markdown",
+      "detect": [".kilocode"],
+      "docs": "https://kilo.ai/docs/agent-behavior/skills"
+    },
+    "openclaw": {
+      "label": "OpenClaw",
+      "short": "OpenClaw",
+      "accent": "#E11D48",
+      "installPath": ".openclaw/skills/",
+      "format": "markdown",
+      "detect": [".openclaw"],
+      "docs": "https://docs.openclaw.ai/tools/skills"
+    },
+    "pi-agent": {
+      "label": "Pi Agent",
+      "short": "Pi",
+      "accent": "#FF4081",
+      "installPath": ".pi/skills/",
+      "format": "markdown",
+      "detect": [".pi"],
+      "docs": "https://pi.dev"
+    },
+    "hermes": {
+      "label": "Hermes",
+      "short": "Hermes",
+      "accent": "#7C3AED",
+      "installPath": "~/.hermes/skills/",
+      "format": "markdown",
+      "detect": [".hermes"],
+      "docs": "https://hermes.ai"
+    },
+    "gemini-cli": {
+      "label": "Gemini CLI",
+      "short": "Gemini",
+      "accent": "#4285F4",
+      "installPath": ".gemini/skills/",
+      "format": "markdown",
+      "detect": [".gemini"],
+      "docs": "https://geminicli.com"
+    }
+  }
+}
