@@ -21,32 +21,74 @@
 
 ## ⚡ Quick Start
 
-### Option 1: Install via npx (Recommended)
+### Step 1: Clone the repo
 
 ```bash
-npx skills add https://github.com/subhansh-dev/agent-maxxing
-```
-
-### Option 2: Manual Install
-
-```bash
-# Clone the repo
 git clone https://github.com/subhansh-dev/agent-maxxing.git
-
-# Copy to your agent's skill directory
-cp -r agent-maxxing/* ~/.claude/skills/   # Claude Code
-cp -r agent-maxxing/* ~/.codex/skills/    # Codex CLI
-cp -r agent-maxxing/* ~/.opencode/skills/ # OpenCode
-cp -r agent-maxxing/* .cursor/skills/     # Cursor
 ```
 
-### Option 3: Fine-Tune Your Agent
+### Step 2: Install for your agent
 
-Start with [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — the master instruction file that tells your agent how to read and apply everything in this repo.
+**Claude Code** (user-wide):
+```bash
+cp -r agent-maxxing ~/.claude/skills/agent-maxxing
+```
 
-### Option 4: Browse & Copy
+**Claude Code** (project-scoped):
+```bash
+cp -r agent-maxxing .claude/skills/agent-maxxing
+```
 
-Each skill is a standalone `.md` file. Browse the roster below, find what you need, and copy it into your project.
+**Codex CLI** (user-wide):
+```bash
+cp -r agent-maxxing ~/.codex/skills/agent-maxxing
+```
+
+**OpenCode** (user-wide):
+```bash
+cp -r agent-maxxing ~/.opencode/skills/agent-maxxing
+```
+
+**Cursor** (project-scoped):
+```bash
+cp -r agent-maxxing .cursor/skills/agent-maxxing
+```
+
+**Continue** (project-scoped):
+```bash
+cp -r agent-maxxing .continue/skills/agent-maxxing
+```
+
+**Kilo Code** (project-scoped):
+```bash
+cp -r agent-maxxing .kilocode/skills/agent-maxxing
+```
+
+### Step 3: Restart your agent
+
+The agent auto-discovers all `.md` files with YAML frontmatter on next session.
+
+### Step 4: Use the skills
+
+Just describe what you want. The agent picks the right skill automatically:
+
+```
+"Build a landing page with glassmorphism"
+→ Loads frontend-design + glass-card
+
+"Write a blog post that sounds human"
+→ Loads humanizer
+
+"Create a diagram of the system architecture"
+→ Loads diagram-maker
+
+"Review my code for security issues"
+→ Loads security-review
+```
+
+### Fine-Tune Your Agent (Optional)
+
+Start with [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — the master instruction file that tells your agent how to read and apply everything in this repo. Add it to your agent's system prompt or `CLAUDE.md`.
 
 ---
 
@@ -242,6 +284,103 @@ agent-maxxing/
 ```
 
 **9 folders. 95+ files. Zero dependencies. Just markdown.**
+
+---
+
+## 🔌 Integration Guide
+
+### How Skills Work
+
+Each skill is a standalone `.md` file with YAML frontmatter:
+
+```markdown
+---
+name: skill-name
+description: One-line description
+---
+
+# Skill Name
+
+## When to Use
+- Trigger condition 1
+- Trigger condition 2
+
+## Instructions
+1. Step one
+2. Step two
+
+## Rules
+- Rule 1
+- Rule 2
+```
+
+When your agent reads this file, it knows:
+- **When** to activate this skill (from `description` and "When to Use")
+- **What** to do (from "Instructions")
+- **What not** to do (from "Rules")
+
+### Permanent Integration (Recommended)
+
+Add this to your agent's system prompt, `CLAUDE.md`, or `AGENTS.md`:
+
+```markdown
+## Agent Maxxing Skills
+
+You have access to 95+ skills at `~/.claude/skills/agent-maxxing/` (adjust path for your agent).
+
+When working on any task, check if a relevant skill exists:
+
+### Frontend Work
+- frontend-design/01-FRONTEND-DESIGN.md — premium UI, glassmorphism, anti-slop
+- frontend-design/02-ANIMATE.md — motion design, micro-interactions
+- frontend-design/04-TYPESET.md — typography systems
+- frontend-design/artifact-design.md — deliberate design choices
+
+### Code Work
+- engineering/execution-protocol.md — solve it don't ask about it
+- engineering/deep-code-review.md — 8-angle code review
+- engineering/security-review.md — security audit
+- engineering/debugging-patterns.md — systematic debugging
+
+### Writing Work
+- content/writing-style.md — how to sound human
+- content/09-HUMANIZER.md — strip AI-isms
+
+### Always Apply
+- engineering/anti-patterns.md — what to avoid
+- engineering/code-review-checklist.md — before shipping
+- The 10 Golden Rules (see below)
+```
+
+### On-Demand Loading
+
+When working on a specific task, the agent should load the relevant skill:
+
+```
+User: "Build a dashboard with charts"
+Agent: *reads frontend-design/01-FRONTEND-DESIGN.md*
+Agent: *reads components/data-table.md*
+Agent: *builds the dashboard following the skill patterns*
+```
+
+### Creating Your Own Skills
+
+Follow the template in [`CONTRIBUTING.md`](CONTRIBUTING.md):
+
+1. Create `category/your-skill.md` with YAML frontmatter
+2. Include: name, description, when to use, instructions, rules
+3. Test with your agent
+4. The agent discovers it automatically on next session
+
+### Skill Discovery
+
+Your agent discovers skills by:
+1. Scanning `.md` files in the skill directory
+2. Reading YAML frontmatter for `name` and `description`
+3. Matching task descriptions to skill descriptions
+4. Loading the relevant skill before acting
+
+No configuration needed — just drop `.md` files in the right folder.
 
 ---
 
