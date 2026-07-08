@@ -41,11 +41,25 @@ Based on your platform from Phase 1, copy the ENTIRE agent-maxxing folder to the
 - Claude Code (project-scoped): cp -r agent-maxxing .claude/skills/agent-maxxing
 - Codex CLI: cp -r agent-maxxing ~/.codex/skills/agent-maxxing
 - OpenCode: cp -r agent-maxxing ~/.opencode/skills/agent-maxxing
+
+IMPORTANT for OpenCode: Each skill must be in its own folder as SKILL.md. If you cloned from GitHub, the files may be named like `anti-patterns.md` — you need to restructure them to `anti-patterns/SKILL.md`. Run this PowerShell command to restructure automatically:
+```powershell
+$dirs = Get-ChildItem ~/.opencode/skills/agent-maxxing -Directory
+foreach ($dir in $dirs) {
+    $mdFiles = Get-ChildItem $dir.FullName -Filter "*.md" -File
+    foreach ($md in $mdFiles) {
+        $skillDir = Join-Path $dir.FullName $md.BaseName
+        New-Item -ItemType Directory -Path $skillDir -Force | Out-Null
+        Move-Item -Path $md.FullName -Destination (Join-Path $skillDir "SKILL.md") -Force
+    }
+}
+```
+
 - Cursor: cp -r agent-maxxing .cursor/skills/agent-maxxing
 - Continue: cp -r agent-maxxing .continue/skills/agent-maxxing
 - Kilo Code: cp -r agent-maxxing .kilocode/skills/agent-maxxing
 
-Verify the copy worked: count the .md files in the destination. There should be 95+.
+Verify the copy worked: count the SKILL.md files in the destination. There should be 95+.
 
 ## PHASE 4: CONFIGURE PERMANENT INTEGRATION
 
@@ -56,7 +70,7 @@ If ~/.claude/CLAUDE.md exists, append to it. If not, create it. Add this section
 
 ## Agent Maxxing Skills
 
-You have 95+ skills at ~/.claude/skills/agent-maxxing/. Before responding to any task, check if a relevant skill exists and load it using the Skill tool. Always apply engineering/anti-patterns.md before writing code. Always follow the execution protocol from engineering/execution-protocol.md. Sound human, not like a bot.
+You have 95+ skills at ~/.claude/skills/agent-maxxing/. Before responding to any task, check if a relevant skill exists and load it using the Skill tool. Always apply engineering/anti-patterns/SKILL.md before writing code. Always follow the execution protocol from engineering/execution-protocol/SKILL.md. Sound human, not like a bot.
 
 Golden Rules:
 1. Search before answering
@@ -76,18 +90,59 @@ You need to create a plugin. Here is exactly what to do:
 1. Create the plugin directory:
    mkdir -p ~/.config/opencode/plugins/agent-maxxing
 
-2. Create package.json at ~/.config/opencode/plugins/agent-maxxing/package.json with content:
+2. Create package.json at ~/.config/opencode/plugins/agent-maxxing/package.json:
+   ```json
    {"name":"agent-maxxing","version":"1.0.0","type":"module","main":"agent-maxxing.js"}
+   ```
 
-3. Create agent-maxxing.js at ~/.config/opencode/plugins/agent-maxxing/agent-maxxing.js. This plugin must:
-   - Export an async function that returns a config hook and a messages.transform hook
-   - The config hook adds the agent-maxxing skills directory to config.skills.paths
-   - The messages.transform hook injects the skill inventory into the first user message of each session
-   - Use the superpowers plugin at ~/.config/opencode/node_modules/superpowers/.opencode/plugins/superpowers.js as a reference for the exact structure
+3. Create agent-maxxing.js at ~/.config/opencode/plugins/agent-maxxing/agent-maxxing.js with this EXACT code:
+   ```javascript
+   import path from 'path';
+   import os from 'os';
 
-4. Update opencode.json at ~/.config/opencode/opencode.json:
-   - Add the plugin path to the "plugin" array
-   - Add a "skills" section with "paths" pointing to the installed agent-maxxing directory
+   const agentMaxxingSkillsDir = path.join(os.homedir(), '.opencode', 'skills', 'agent-maxxing');
+
+   const BOOTSTRAP = `<EXTREMELY_IMPORTANT>
+   You have 95+ Agent Maxxing skills loaded from ~/.opencode/skills/agent-maxxing/.
+   Before responding to any task, check if a relevant skill exists and load it.
+   Always apply engineering/anti-patterns/SKILL.md before writing code.
+   Always follow the execution protocol from engineering/execution-protocol/SKILL.md.
+   Sound human, not like a bot.
+   </EXTREMELY_IMPORTANT>`;
+
+   export const AgentMaxxingPlugin = async ({ project, client, $, directory, worktree }) => {
+     return {
+       config: async (config) => {
+         config.skills = config.skills || {};
+         config.skills.paths = config.skills.paths || [];
+         if (!config.skills.paths.includes(agentMaxxingSkillsDir)) {
+           config.skills.paths.push(agentMaxxingSkillsDir);
+         }
+       },
+       'experimental.chat.messages.transform': async (_input, output) => {
+         if (!output.messages.length) return;
+         const firstUser = output.messages.find(m => m.info.role === 'user');
+         if (!firstUser || !firstUser.parts.length) return;
+         if (firstUser.parts.some(p => p.type === 'text' && p.text.includes('EXTREMELY_IMPORTANT'))) return;
+         const ref = firstUser.parts[0];
+         firstUser.parts.unshift({ ...ref, type: 'text', text: BOOTSTRAP });
+       }
+     };
+   };
+   ```
+
+4. Do NOT add the plugin to the "plugin" array in opencode.json — local plugins in ~/.config/opencode/plugins/ are auto-loaded at startup. Only npm packages go in the "plugin" array.
+
+5. Add a "skills" section to opencode.json at ~/.config/opencode/opencode.json:
+   ```json
+   {
+     "skills": {
+       "paths": ["C:\\Users\\YOUR_USERNAME\\.opencode\\skills\\agent-maxxing"]
+     }
+   }
+   ```
+
+IMPORTANT: Each skill must be in its own folder as SKILL.md (e.g., engineering/anti-patterns/SKILL.md, NOT engineering/anti-patterns.md). OpenCode only discovers files named SKILL.md.
 
 ### For Cursor / Continue / Kilo:
 Add a similar integration block to the project's rules file (.cursorrules, .continue/config, etc.) that tells the agent about the skills directory and the Golden Rules.
@@ -96,29 +151,29 @@ Add a similar integration block to the project's rules file (.cursorrules, .cont
 
 Now that the skills are installed and configured, you need to internalize them. Do this right now:
 
-1. Read the agent-maxxing skills folder and find FINE-TUNE-AGENT.md. This is the master instruction file.
+1. Read the agent-maxxing skills folder and find FINE-TUNE-AGENT/SKILL.md. This is the master instruction file.
 
 2. Read the core system prompts in order:
-   - system-prompts/01-agent-core-personality.md — your new personality
-   - system-prompts/02-coding-excellence.md — how to write code
-   - system-prompts/03-reasoning-planning.md — how to think
-   - system-prompts/06-tone-communication.md — how to talk
+   - system-prompts/01-agent-core-personality/SKILL.md — your new personality
+   - system-prompts/02-coding-excellence/SKILL.md — how to write code
+   - system-prompts/03-reasoning-planning/SKILL.md — how to think
+   - system-prompts/06-tone-communication/SKILL.md — how to talk
 
 3. Read the anti-patterns:
-   - engineering/anti-patterns.md — what to NEVER do
-   - engineering/execution-protocol.md — how to operate (solve it, don't ask about it)
+   - engineering/anti-patterns/SKILL.md — what to NEVER do
+   - engineering/execution-protocol/SKILL.md — how to operate (solve it, don't ask about it)
 
 4. Read the writing style:
-   - content/writing-style.md — how to sound human
+   - content/writing-style/SKILL.md — how to sound human
 
 5. After reading each file, note the 3 most important takeaways from it. Tell me what they are.
 
 ## PHASE 6: VERIFY
 
 Run these checks:
-- ls the skills directory and confirm 95+ .md files exist
-- Read the first 5 lines of engineering/anti-patterns.md to confirm it loaded
-- Read the first 5 lines of content/writing-style.md to confirm it loaded
+- ls the skills directory and confirm 95+ SKILL.md files exist
+- Read the first 5 lines of engineering/anti-patterns/SKILL.md to confirm it loaded
+- Read the first 5 lines of content/writing-style/SKILL.md to confirm it loaded
 - Tell me which platform you detected, where you installed the skills, and how many skills are available
 
 ## PHASE 7: CONFIRM

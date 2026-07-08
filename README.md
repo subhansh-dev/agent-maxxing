@@ -120,7 +120,7 @@ Follow the 10 Golden Rules.
 Sound human, not like a bot.
 ```
 
-**Or use the master file:** [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — comprehensive step-by-step guide that walks your agent through every skill category.
+**Or use the master file:** [`FINE-TUNE-AGENT.md`(FINE-TUNE-AGENT/SKILL.md) — comprehensive step-by-step guide that walks your agent through every skill category.
 
 ---
 
@@ -145,28 +145,28 @@ Building things that work.
 
 | Skill | Description |
 |-------|-------------|
-| [Execution Protocol](engineering/execution-protocol.md) | Solve it don't ask about it — the problem-solving chain |
-| [Anti-Patterns](engineering/anti-patterns.md) | Code, design, writing anti-patterns to avoid |
-| [Code Review Checklist](engineering/code-review-checklist.md) | Ship-ready review: correctness, security, performance |
-| [Deep Code Review](engineering/deep-code-review.md) | 8-angle methodology from Claude Code bundled skills |
-| [Security Review](engineering/security-review.md) | Senior security engineer review with false-positive filtering |
-| [Code Simplify](engineering/code-simplify.md) | 4-angle cleanup: reuse, simplify, efficiency, altitude |
-| [Runtime Verify](engineering/runtime-verify.md) | Run the app don't test it — observation is evidence |
-| [Debugging Patterns](engineering/debugging-patterns.md) | Systematic methodology, common bug categories |
-| [Testing Patterns](engineering/testing-patterns.md) | What to test, test structure, test pyramid |
-| [API Design](engineering/api-design.md) | REST patterns, naming, status codes, pagination |
-| [Database Patterns](engineering/database-patterns.md) | Schema design, indexing, migrations, query optimization |
-| [Performance Patterns](engineering/performance-patterns.md) | Lazy loading, caching, memoization, optimization |
-| [Code Generator](engineering/05-CODE-GENERATOR.md) | Generate code with best practices |
-| [Distill](engineering/06-DISTILL.md) | Strip to essence by removing complexity |
-| [Extract](engineering/07-EXTRACT.md) | Extract reusable components and tokens |
-| [Harden](engineering/10-HARDEN.md) | Error handling, edge cases, resilience |
-| [Normalize](engineering/12-NORMALIZE.md) | Match your design system |
-| [Optimize](engineering/14-OPTIMIZE.md) | Loading, rendering, bundle size |
-| [Overdrive](engineering/15-OVERDRIVE.md) | Push past conventional limits |
-| [Quieter](engineering/16-QUIETER.md) | Tone down overly bold designs |
-| [Node Debugger](engineering/25-NODE-INSPECT-DEBUGGER.md) | Node.js debugging with inspect protocol |
-| [Python Debugger](engineering/26-PYTHON-DEBUGPY.md) | Python remote debugging with debugpy |
+| [Execution Protocol](engineering/execution-protocol/SKILL.md) | Solve it don't ask about it — the problem-solving chain |
+| [Anti-Patterns](engineering/anti-patterns/SKILL.md) | Code, design, writing anti-patterns to avoid |
+| [Code Review Checklist](engineering/code-review-checklist/SKILL.md) | Ship-ready review: correctness, security, performance |
+| [Deep Code Review](engineering/deep-code-review/SKILL.md) | 8-angle methodology from Claude Code bundled skills |
+| [Security Review](engineering/security-review/SKILL.md) | Senior security engineer review with false-positive filtering |
+| [Code Simplify](engineering/code-simplify/SKILL.md) | 4-angle cleanup: reuse, simplify, efficiency, altitude |
+| [Runtime Verify](engineering/runtime-verify/SKILL.md) | Run the app don't test it — observation is evidence |
+| [Debugging Patterns](engineering/debugging-patterns/SKILL.md) | Systematic methodology, common bug categories |
+| [Testing Patterns](engineering/testing-patterns/SKILL.md) | What to test, test structure, test pyramid |
+| [API Design](engineering/api-design/SKILL.md) | REST patterns, naming, status codes, pagination |
+| [Database Patterns](engineering/database-patterns/SKILL.md) | Schema design, indexing, migrations, query optimization |
+| [Performance Patterns](engineering/performance-patterns/SKILL.md) | Lazy loading, caching, memoization, optimization |
+| [Code Generator](engineering/05-CODE-GENERATOR/SKILL.md) | Generate code with best practices |
+| [Distill](engineering/06-DISTILL/SKILL.md) | Strip to essence by removing complexity |
+| [Extract](engineering/07-EXTRACT/SKILL.md) | Extract reusable components and tokens |
+| [Harden](engineering/10-HARDEN/SKILL.md) | Error handling, edge cases, resilience |
+| [Normalize](engineering/12-NORMALIZE/SKILL.md) | Match your design system |
+| [Optimize](engineering/14-OPTIMIZE/SKILL.md) | Loading, rendering, bundle size |
+| [Overdrive](engineering/15-OVERDRIVE/SKILL.md) | Push past conventional limits |
+| [Quieter](engineering/16-QUIETER/SKILL.md) | Tone down overly bold designs |
+| [Node Debugger](engineering/25-NODE-INSPECT-DEBUGGER/SKILL.md) | Node.js debugging with inspect protocol |
+| [Python Debugger](engineering/26-PYTHON-DEBUGPY/SKILL.md) | Python remote debugging with debugpy |
 
 ### 🎨 Frontend & Design Division
 
@@ -174,22 +174,22 @@ Making it beautiful, usable, and distinctly human.
 
 | Skill | Description |
 |-------|-------------|
-| [Frontend Design](frontend-design/01-FRONTEND-DESIGN.md) | Premium UI patterns, glassmorphism, anti-slop rules |
-| [Animate](frontend-design/02-ANIMATE.md) | Motion design, micro-interactions, timing |
-| [Colorize](frontend-design/03-COLORIZE.md) | Color theory, palettes, strategic color |
-| [Typeset](frontend-design/04-TYPESET.md) | Typography systems, font pairing, hierarchy |
-| [Bolder](frontend-design/05-BOLDER.md) | Amplify safe designs to make them interesting |
-| [Delight](frontend-design/06-DELIGHT.md) | Moments of joy and personality |
-| [Polish](frontend-design/07-POLISH.md) | Final quality pass — alignment, spacing |
-| [Critique](frontend-design/08-CRITIQUE.md) | Evaluate design from UX perspective |
-| [Onboard](frontend-design/13-ONBOARD.md) | Onboarding flows and first-time experiences |
-| [Artifact Design](frontend-design/artifact-design.md) | Deliberate design choices, avoid AI-generated looks |
-| [Typography](frontend-design/typography.md) | Font pairing, scale, typographic systems |
-| [Color & Contrast](frontend-design/color-and-contrast.md) | Color theory and accessibility |
-| [Interaction Design](frontend-design/interaction-design.md) | Micro-interactions, hover states |
-| [Motion Design](frontend-design/motion-design.md) | Timing, easing, enter/exit patterns |
-| [Responsive Design](frontend-design/responsive-design.md) | Breakpoints, fluid layouts, mobile-first |
-| [Spatial Design](frontend-design/spatial-design.md) | Layout, spacing, visual rhythm |
+| [Frontend Design](frontend-design/01-FRONTEND-DESIGN/SKILL.md) | Premium UI patterns, glassmorphism, anti-slop rules |
+| [Animate](frontend-design/02-ANIMATE/SKILL.md) | Motion design, micro-interactions, timing |
+| [Colorize](frontend-design/03-COLORIZE/SKILL.md) | Color theory, palettes, strategic color |
+| [Typeset](frontend-design/04-TYPESET/SKILL.md) | Typography systems, font pairing, hierarchy |
+| [Bolder](frontend-design/05-BOLDER/SKILL.md) | Amplify safe designs to make them interesting |
+| [Delight](frontend-design/06-DELIGHT/SKILL.md) | Moments of joy and personality |
+| [Polish](frontend-design/07-POLISH/SKILL.md) | Final quality pass — alignment, spacing |
+| [Critique](frontend-design/08-CRITIQUE/SKILL.md) | Evaluate design from UX perspective |
+| [Onboard](frontend-design/13-ONBOARD/SKILL.md) | Onboarding flows and first-time experiences |
+| [Artifact Design](frontend-design/artifact-design/SKILL.md) | Deliberate design choices, avoid AI-generated looks |
+| [Typography](frontend-design/typography/SKILL.md) | Font pairing, scale, typographic systems |
+| [Color & Contrast](frontend-design/color-and-contrast/SKILL.md) | Color theory and accessibility |
+| [Interaction Design](frontend-design/interaction-design/SKILL.md) | Micro-interactions, hover states |
+| [Motion Design](frontend-design/motion-design/SKILL.md) | Timing, easing, enter/exit patterns |
+| [Responsive Design](frontend-design/responsive-design/SKILL.md) | Breakpoints, fluid layouts, mobile-first |
+| [Spatial Design](frontend-design/spatial-design/SKILL.md) | Layout, spacing, visual rhythm |
 
 ### 📝 Content & Writing Division
 
@@ -197,10 +197,10 @@ Sound human, not like a press release.
 
 | Skill | Description |
 |-------|-------------|
-| [Humanizer](content/09-HUMANIZER.md) | Strip AI-isms, add real voice |
-| [Clarify](content/04-CLARIFY.md) | Improve unclear UX copy and errors |
-| [Writing Style](content/writing-style.md) | How to sound human — voice, rhythm, what to avoid |
-| [UX Writing](frontend-design/ux-writing.md) | Microcopy, error messages, clear interface text |
+| [Humanizer](content/09-HUMANIZER/SKILL.md) | Strip AI-isms, add real voice |
+| [Clarify](content/04-CLARIFY/SKILL.md) | Improve unclear UX copy and errors |
+| [Writing Style](content/writing-style/SKILL.md) | How to sound human — voice, rhythm, what to avoid |
+| [UX Writing](frontend-design/ux-writing/SKILL.md) | Microcopy, error messages, clear interface text |
 
 ### 🖼️ Visual Division
 
@@ -208,11 +208,11 @@ Diagrams, memes, and canvas art.
 
 | Skill | Description |
 |-------|-------------|
-| [Diagram Maker](visual/10-DIAGRAM-MAKER.md) | SVG, HTML, or Excalidraw diagrams |
-| [Meme Maker](visual/11-MEME-MAKER.md) | Generate memes from curated templates |
-| [Canvas](visual/12-CANVAS.md) | Canvas-based visual creation |
-| [Excalidraw Patterns](visual/excalidraw-patterns.md) | Hand-drawn diagram patterns |
-| [SVG Template](visual/svg-template.md) | SVG generation templates |
+| [Diagram Maker](visual/10-DIAGRAM-MAKER/SKILL.md) | SVG, HTML, or Excalidraw diagrams |
+| [Meme Maker](visual/11-MEME-MAKER/SKILL.md) | Generate memes from curated templates |
+| [Canvas](visual/12-CANVAS/SKILL.md) | Canvas-based visual creation |
+| [Excalidraw Patterns](visual/excalidraw-patterns/SKILL.md) | Hand-drawn diagram patterns |
+| [SVG Template](visual/svg-template/SKILL.md) | SVG generation templates |
 
 ### 🧠 Agent Meta & Self-Improvement
 
@@ -220,13 +220,13 @@ Make your agent better over time.
 
 | Skill | Description |
 |-------|-------------|
-| [Self-Improvement](agent-meta/17-SELF-IMPROVEMENT.md) | Agent learning loops and evolution |
-| [Skill Creator](agent-meta/18-SKILL-CREATOR.md) | Create new agent skills from scratch |
-| [Skill Vetter](agent-meta/19-SKILL-VETTER.md) | Validate and review skills |
-| [Find Skills](agent-meta/08-FIND-SKILLS.md) | Search and discover available skills |
-| [GitHub](agent-meta/09-GITHUB.md) | GitHub integration and repo management |
-| [Teach Impeccable](agent-meta/24-TEACH-IMPECCABLE.md) | Persistent design guidelines setup |
-| [Init Project](agent-meta/init-project.md) | Create CLAUDE.md by analyzing codebase |
+| [Self-Improvement](agent-meta/17-SELF-IMPROVEMENT/SKILL.md) | Agent learning loops and evolution |
+| [Skill Creator](agent-meta/18-SKILL-CREATOR/SKILL.md) | Create new agent skills from scratch |
+| [Skill Vetter](agent-meta/19-SKILL-VETTER/SKILL.md) | Validate and review skills |
+| [Find Skills](agent-meta/08-FIND-SKILLS/SKILL.md) | Search and discover available skills |
+| [GitHub](agent-meta/09-GITHUB/SKILL.md) | GitHub integration and repo management |
+| [Teach Impeccable](agent-meta/24-TEACH-IMPECCABLE/SKILL.md) | Persistent design guidelines setup |
+| [Init Project](agent-meta/init-project/SKILL.md) | Create CLAUDE.md by analyzing codebase |
 
 ### ⚙️ Workflows & Orchestration
 
@@ -234,12 +234,12 @@ How to manage complex tasks.
 
 | Skill | Description |
 |-------|-------------|
-| [Batch Orchestration](workflows/batch-orchestration.md) | Parallel work with isolated worktrees |
-| [Git Workflow](workflows/git-workflow.md) | Commits, branching, PRs, conflict resolution |
-| [Taskflow](workflows/22-TASKFLOW.md) | Structured task management |
-| [Taskflow Inbox Triage](workflows/23-TASKFLOW-INBOX-TRIAGE.md) | Inbox triage and priority |
-| [Spike](workflows/21-SPIKE.md) | Quick prototyping and exploration |
-| [Healthcheck](workflows/11-HEALTHCHECK.md) | System health monitoring |
+| [Batch Orchestration](workflows/batch-orchestration/SKILL.md) | Parallel work with isolated worktrees |
+| [Git Workflow](workflows/git-workflow/SKILL.md) | Commits, branching, PRs, conflict resolution |
+| [Taskflow](workflows/22-TASKFLOW/SKILL.md) | Structured task management |
+| [Taskflow Inbox Triage](workflows/23-TASKFLOW-INBOX-TRIAGE/SKILL.md) | Inbox triage and priority |
+| [Spike](workflows/21-SPIKE/SKILL.md) | Quick prototyping and exploration |
+| [Healthcheck](workflows/11-HEALTHCHECK/SKILL.md) | System health monitoring |
 
 ### 🔄 Adaptation & Learning
 
@@ -247,9 +247,9 @@ Cross-platform and responsive patterns.
 
 | Skill | Description |
 |-------|-------------|
-| [Adapt](adaptation/01-ADAPT.md) | Cross-screen, cross-device adaptation |
-| [Arrange](adaptation/02-ARRANGE.md) | Layout, spacing, visual rhythm |
-| [Audit](adaptation/03-AUDIT.md) | Accessibility, performance, theming audit |
+| [Adapt](adaptation/01-ADAPT/SKILL.md) | Cross-screen, cross-device adaptation |
+| [Arrange](adaptation/02-ARRANGE/SKILL.md) | Layout, spacing, visual rhythm |
+| [Audit](adaptation/03-AUDIT/SKILL.md) | Accessibility, performance, theming audit |
 
 ---
 
@@ -259,24 +259,24 @@ Cross-platform and responsive patterns.
 
 | Component | Description |
 |-----------|-------------|
-| [Glass Card](components/glass-card.md) | Glassmorphism with backdrop blur and specular tracking |
-| [Gradient Button](components/gradient-button.md) | Buttons with hover glow and press feedback |
-| [Animated Input](components/animated-input.md) | Floating labels and focus animations |
-| [Modal Dialog](components/modal-dialog.md) | Backdrop blur, spring animation, focus trap |
-| [Loading Skeleton](components/loading-skeleton.md) | Shimmer placeholders for content |
-| [Toast Notification](components/toast-notification.md) | Slide-in, auto-dismiss, stacking |
-| [Navbar](components/navbar.md) | Glass effect, scroll-aware styling |
-| [Data Table](components/data-table.md) | Sorting, striped rows, hover states |
-| [Tooltip](components/tooltip.md) | Arrow, delays, smart positioning |
-| [Tabs](components/tabs.md) | Animated indicator, keyboard nav |
-| [Dropdown](components/dropdown.md) | Glass styling, keyboard navigation |
-| [Avatar](components/avatar.md) | Status indicators, initials fallback |
-| [Progress Bar](components/progress-bar.md) | Animated, gradient, multi-step |
-| [Badge & Tag](components/badge-tag.md) | Multiple color variants |
-| [Toggle Switch](components/toggle-switch.md) | Smooth animation, accessible |
-| [Accordion](components/accordion.md) | Expandable sections, smooth height |
-| [Breadcrumb](components/breadcrumb.md) | Navigation with separators |
-| [Pagination](components/pagination.md) | Page numbers, prev/next |
+| [Glass Card](components/glass-card/SKILL.md) | Glassmorphism with backdrop blur and specular tracking |
+| [Gradient Button](components/gradient-button/SKILL.md) | Buttons with hover glow and press feedback |
+| [Animated Input](components/animated-input/SKILL.md) | Floating labels and focus animations |
+| [Modal Dialog](components/modal-dialog/SKILL.md) | Backdrop blur, spring animation, focus trap |
+| [Loading Skeleton](components/loading-skeleton/SKILL.md) | Shimmer placeholders for content |
+| [Toast Notification](components/toast-notification/SKILL.md) | Slide-in, auto-dismiss, stacking |
+| [Navbar](components/navbar/SKILL.md) | Glass effect, scroll-aware styling |
+| [Data Table](components/data-table/SKILL.md) | Sorting, striped rows, hover states |
+| [Tooltip](components/tooltip/SKILL.md) | Arrow, delays, smart positioning |
+| [Tabs](components/tabs/SKILL.md) | Animated indicator, keyboard nav |
+| [Dropdown](components/dropdown/SKILL.md) | Glass styling, keyboard navigation |
+| [Avatar](components/avatar/SKILL.md) | Status indicators, initials fallback |
+| [Progress Bar](components/progress-bar/SKILL.md) | Animated, gradient, multi-step |
+| [Badge & Tag](components/badge-tag/SKILL.md) | Multiple color variants |
+| [Toggle Switch](components/toggle-switch/SKILL.md) | Smooth animation, accessible |
+| [Accordion](components/accordion/SKILL.md) | Expandable sections, smooth height |
+| [Breadcrumb](components/breadcrumb/SKILL.md) | Navigation with separators |
+| [Pagination](components/pagination/SKILL.md) | Page numbers, prev/next |
 
 ---
 
@@ -286,13 +286,13 @@ Extracted from the leaked system prompts of Claude Fable 5, GPT-5.5 Codex, Gemin
 
 | File | Source | What It Improves |
 |------|--------|------------------|
-| [Fine-Tune](system-prompts/00-FINE-TUNE.md) | Master guide | How to use all prompts |
-| [Fable 5 Base](system-prompts/01-agent-core-personality.md) | Claude Fable 5 | Personality, memory, tone, refusal handling |
-| [Coding Excellence](system-prompts/02-coding-excellence.md) | Codex GPT-5.5 + Claude Code | Engineering judgment, code quality |
-| [Reasoning & Planning](system-prompts/03-reasoning-planning.md) | Codex Plan Mode | 3-phase planning, decision-making |
-| [Frontend Mastery](system-prompts/04-frontend-mastery.md) | Codex GPT-5.5 + Claude Design | UI/UX rules, anti-AI-slop |
-| [Agent Orchestration](system-prompts/05-agent-orchestration.md) | Claude Code + Gemini CLI | Tool usage, sub-agents, delegation |
-| [Tone & Communication](system-prompts/06-tone-communication.md) | Fable 5 + Codex + Cursor | How to talk and present |
+| [Fine-Tune](system-prompts/00-FINE-TUNE/SKILL.md) | Master guide | How to use all prompts |
+| [Fable 5 Base](system-prompts/01-agent-core-personality/SKILL.md) | Claude Fable 5 | Personality, memory, tone, refusal handling |
+| [Coding Excellence](system-prompts/02-coding-excellence/SKILL.md) | Codex GPT-5.5 + Claude Code | Engineering judgment, code quality |
+| [Reasoning & Planning](system-prompts/03-reasoning-planning/SKILL.md) | Codex Plan Mode | 3-phase planning, decision-making |
+| [Frontend Mastery](system-prompts/04-frontend-mastery/SKILL.md) | Codex GPT-5.5 + Claude Design | UI/UX rules, anti-AI-slop |
+| [Agent Orchestration](system-prompts/05-agent-orchestration/SKILL.md) | Claude Code + Gemini CLI | Tool usage, sub-agents, delegation |
+| [Tone & Communication](system-prompts/06-tone-communication/SKILL.md) | Fable 5 + Codex + Cursor | How to talk and present |
 
 ---
 
@@ -300,22 +300,28 @@ Extracted from the leaked system prompts of Claude Fable 5, GPT-5.5 Codex, Gemin
 
 ```
 agent-maxxing/
-├── FINE-TUNE-AGENT.md          ← Start here — master instruction file
-├── README.md                   ← You are here
-├── LICENSE                     ← MIT
+├── FINE-TUNE-AGENT/          ← Start here — master instruction file
+│   └── SKILL.md
+├── README.md                 ← You are here
+├── LICENSE                   ← MIT
 │
-├── frontend-design/       (16) ← UI, CSS, motion, typography
-├── content/               (3)  ← Writing, humanization
-├── visual/                (6)  ← Diagrams, memes, canvas
-├── engineering/           (22) ← Code, security, testing, debugging
-├── agent-meta/            (8)  ← Self-improvement, skill creation
-├── workflows/             (6)  ← Task management, git, orchestration
-├── adaptation/            (3)  ← Cross-platform, responsive
-├── components/            (19) ← Reusable UI patterns
-└── system-prompts/        (7)  ← Extracted from top AI agents
+├── frontend-design/          (16) ← UI, CSS, motion, typography
+│   ├── 01-FRONTEND-DESIGN/SKILL.md
+│   ├── 02-ANIMATE/SKILL.md
+│   └── ...
+├── content/                  (3)  ← Writing, humanization
+├── visual/                   (6)  ← Diagrams, memes, canvas
+├── engineering/              (22) ← Code, security, testing, debugging
+├── agent-meta/               (8)  ← Self-improvement, skill creation
+├── workflows/                (6)  ← Task management, git, orchestration
+├── adaptation/               (3)  ← Cross-platform, responsive
+├── components/               (19) ← Reusable UI patterns
+└── system-prompts/           (7)  ← Extracted from top AI agents
 ```
 
-**9 folders. 95+ files. Zero dependencies. Just markdown.**
+Each skill lives in its own folder as `SKILL.md` — this is the standard naming convention that OpenCode, Claude Code, and other agents use for skill discovery.
+
+**9 folders. 95+ SKILL.md files. Zero dependencies. Just markdown.**
 
 ---
 
@@ -323,7 +329,7 @@ agent-maxxing/
 
 ### How Skills Work
 
-Each skill is a standalone `.md` file with YAML frontmatter:
+Each skill is a `SKILL.md` file with YAML frontmatter:
 
 ```markdown
 ---
@@ -363,24 +369,24 @@ You have access to 95+ skills at `~/.claude/skills/agent-maxxing/` (adjust path 
 When working on any task, check if a relevant skill exists:
 
 ### Frontend Work
-- frontend-design/01-FRONTEND-DESIGN.md — premium UI, glassmorphism, anti-slop
-- frontend-design/02-ANIMATE.md — motion design, micro-interactions
-- frontend-design/04-TYPESET.md — typography systems
-- frontend-design/artifact-design.md — deliberate design choices
+- frontend-design/01-FRONTEND-DESIGN/SKILL.md — premium UI, glassmorphism, anti-slop
+- frontend-design/02-ANIMATE/SKILL.md — motion design, micro-interactions
+- frontend-design/04-TYPESET/SKILL.md — typography systems
+- frontend-design/artifact-design/SKILL.md — deliberate design choices
 
 ### Code Work
-- engineering/execution-protocol.md — solve it don't ask about it
-- engineering/deep-code-review.md — 8-angle code review
-- engineering/security-review.md — security audit
-- engineering/debugging-patterns.md — systematic debugging
+- engineering/execution-protocol/SKILL.md — solve it don't ask about it
+- engineering/deep-code-review/SKILL.md — 8-angle code review
+- engineering/security-review/SKILL.md — security audit
+- engineering/debugging-patterns/SKILL.md — systematic debugging
 
 ### Writing Work
-- content/writing-style.md — how to sound human
-- content/09-HUMANIZER.md — strip AI-isms
+- content/writing-style/SKILL.md — how to sound human
+- content/09-HUMANIZER/SKILL.md — strip AI-isms
 
 ### Always Apply
-- engineering/anti-patterns.md — what to avoid
-- engineering/code-review-checklist.md — before shipping
+- engineering/anti-patterns/SKILL.md — what to avoid
+- engineering/code-review-checklist/SKILL.md — before shipping
 - The 10 Golden Rules (see below)
 ```
 
@@ -390,8 +396,8 @@ When working on a specific task, the agent should load the relevant skill:
 
 ```
 User: "Build a dashboard with charts"
-Agent: *reads frontend-design/01-FRONTEND-DESIGN.md*
-Agent: *reads components/data-table.md*
+Agent: *reads frontend-design/01-FRONTEND-DESIGN/SKILL.md*
+Agent: *reads components/data-table/SKILL.md*
 Agent: *builds the dashboard following the skill patterns*
 ```
 
@@ -399,7 +405,7 @@ Agent: *builds the dashboard following the skill patterns*
 
 Follow the template in [`CONTRIBUTING.md`](CONTRIBUTING.md):
 
-1. Create `category/your-skill.md` with YAML frontmatter
+1. Create `category/your-skill/SKILL.md` with YAML frontmatter
 2. Include: name, description, when to use, instructions, rules
 3. Test with your agent
 4. The agent discovers it automatically on next session
@@ -407,12 +413,12 @@ Follow the template in [`CONTRIBUTING.md`](CONTRIBUTING.md):
 ### Skill Discovery
 
 Your agent discovers skills by:
-1. Scanning `.md` files in the skill directory
+1. Scanning for `SKILL.md` files in the skill directory
 2. Reading YAML frontmatter for `name` and `description`
 3. Matching task descriptions to skill descriptions
 4. Loading the relevant skill before acting
 
-No configuration needed — just drop `.md` files in the right folder.
+No configuration needed — just drop `SKILL.md` files in the right folder.
 
 ---
 
@@ -424,7 +430,7 @@ Works with **any agent supporting the [Agent Skills specification](https://agent
 |-------|-------------|
 | **Claude Code** | `~/.claude/skills/` |
 | **Codex CLI** | `~/.codex/skills/` |
-| **OpenCode** | `~/.opencode/skills/` |
+| **OpenCode** | `~/.opencode/skills/` (needs plugin for auto-injection — see PROMPT-INTEGRATE.md) |
 | **Cursor** | `.cursor/skills/` |
 | **Continue** | `.continue/skills/` |
 | **Kilo** | `.kilocode/skills/` |
@@ -494,7 +500,7 @@ Don't want to read through all of that? Pick whichever prompt fits your situatio
 ### Quick Prompt (just reads and internalizes)
 
 ```
-Deep dive into the agent-maxxing folder at ~/.claude/skills/agent-maxxing (or wherever you installed it). Read every .md file — every skill, every system prompt, every component, every workflow example. Understand what each file teaches. Then fine-tune yourself: adopt the patterns, internalize the anti-patterns, apply the engineering judgment, use the writing style. Integrate all 95+ skills so you can use them on any task. From now on, before responding to anything, check if a relevant skill exists and apply it. You are no longer a generic agent — you are maxxed.
+Deep dive into the agent-maxxing folder at ~/.claude/skills/agent-maxxing (or wherever you installed it). Read every SKILL.md file — every skill, every system prompt, every component, every workflow example. Understand what each file teaches. Then fine-tune yourself: adopt the patterns, internalize the anti-patterns, apply the engineering judgment, use the writing style. Integrate all 95+ skills so you can use them on any task. From now on, before responding to anything, check if a relevant skill exists and apply it. You are no longer a generic agent — you are maxxed.
 ```
 
 ### Fine-Tune Prompt (behavior transformation — the real magic)
@@ -512,7 +518,7 @@ This is NOT an installation prompt. Use this AFTER the skills are already instal
 ### Ultra-Short Prompt (for context-limited agents)
 
 ```
-Read FINE-TUNE-AGENT.md in the agent-maxxing skills folder. Follow its self-fine-tune protocol. Internalize anti-patterns, execution protocol, and writing style. From now on, check for relevant skills before every task.
+Read FINE-TUNE-AGENT/SKILL.md in the agent-maxxing skills folder. Follow its self-fine-tune protocol. Internalize anti-patterns, execution protocol, and writing style. From now on, check for relevant skills before every task.
 ```
 
 That's it. One prompt. Your agent reads everything, learns the patterns, and starts applying them. It won't be perfect (context windows have limits), but it'll be noticeably better.
