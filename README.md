@@ -487,6 +487,18 @@ description: One-line description of what this skill does
 
 ---
 
+## 💡 P.S. — The Lazy Prompt
+
+Don't want to read through all of that? Just copy-paste this prompt to your agent and let it figure itself out:
+
+```
+Deep dive into the agent-maxxing folder at ~/.claude/skills/agent-maxxing (or wherever you installed it). Read every .md file — every skill, every system prompt, every component, every workflow example. Understand what each file teaches. Then fine-tune yourself: adopt the patterns, internalize the anti-patterns, apply the engineering judgment, use the writing style. Integrate all 95+ skills so you can use them on any task. From now on, before responding to anything, check if a relevant skill exists and apply it. You are no longer a generic agent — you are maxxed.
+```
+
+That's it. One prompt. Your agent reads everything, learns the patterns, and starts applying them. It won't be perfect (context windows have limits), but it'll be noticeably better.
+
+---
+
 ## 📜 License
 
 MIT License — use these skills anywhere, no restrictions.
