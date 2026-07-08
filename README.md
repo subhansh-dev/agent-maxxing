@@ -86,9 +86,41 @@ Just describe what you want. The agent picks the right skill automatically:
 → Loads security-review
 ```
 
-### Fine-Tune Your Agent (Optional)
+### Step 5: Fine-Tune Your Agent
 
-Start with [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — the master instruction file that tells your agent how to read and apply everything in this repo. Add it to your agent's system prompt or `CLAUDE.md`.
+This is where the magic happens. Your agent can **read these skills and transform its own behavior** — not through weight training, but through context injection. When an agent reads a skill file, it internalizes the patterns for that session and applies them to every task.
+
+**What fine-tuning does:**
+- Teaches your agent to avoid AI slop (no "Great question!", no purple gradients)
+- Injects engineering judgment from GPT-5.5 and Claude Fable 5
+- Adds 8-angle code review methodology
+- Installs security review patterns
+- Forces the execution protocol (solve it, don't ask about it)
+- Makes the agent sound human, not like a press release
+
+**How to do it:**
+
+Add this prompt to your agent's system prompt, `CLAUDE.md`, or `AGENTS.md`:
+
+```markdown
+## Self-Fine-Tune Protocol
+
+Before responding to any task, read these files in order:
+1. FINE-TUNE-AGENT.md — master instructions
+2. system-prompts/01-fable-5-base.md — personality and tone
+3. system-prompts/02-coding-excellence.md — engineering patterns
+4. system-prompts/03-reasoning-planning.md — thinking patterns
+5. engineering/anti-patterns.md — what to avoid
+6. engineering/execution-protocol.md — how to operate
+7. content/writing-style.md — how to communicate
+
+After reading, apply these patterns to every response.
+Check anti-patterns before shipping code.
+Follow the 10 Golden Rules.
+Sound human, not like a bot.
+```
+
+**Or use the master file:** [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — comprehensive step-by-step guide that walks your agent through every skill category.
 
 ---
 
