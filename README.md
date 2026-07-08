@@ -1,14 +1,16 @@
 <div align="center">
 
-# Agent Skills
+# Agent Maxxing
 
-**40+ production-ready skills for AI coding agents. One folder. Zero dependencies. Works everywhere.**
+**85+ production-ready skills, 19 UI components, and 7 system prompts for AI coding agents. One folder. Zero dependencies. Works everywhere.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Skills-40+-orange.svg)](#skills)
-[![Agents](https://img.shields.io/badge/Agents-60+-blue.svg)](#compatible-agents)
-[![Format](https://img.shields.io/badge/Format-Markdown-green.svg)](#skills)
-[![Stars](https://img.shields.io/github/stars/subhansh-dev/agent-skills?style=social)](#)
+[![Skills](https://img.shields.io/badge/Skills-85+-orange.svg)](#skills)
+[![Components](https://img.shields.io/badge/Components-19-blue.svg)](#components)
+[![Prompts](https://img.shields.io/badge/System%20Prompts-7-purple.svg)](#system-prompts-fine-tune)
+[![Agents](https://img.shields.io/badge/Agents-60+-green.svg)](#compatible-agents)
+[![Format](https://img.shields.io/badge/Format-Markdown-white.svg)](#skills)
+[![Stars](https://img.shields.io/github/stars/subhansh-dev/agent-maxxing?style=social)](#)
 
 <br>
 
@@ -289,7 +291,7 @@ agent-skills/
     └── 06-tone-communication.md
 ```
 
-**9 folders. 80 files. Zero dependencies. Just `.md` files your agent reads.**
+**9 folders. 85+ files. Zero dependencies. Just `.md` files your agent reads.**
 
 ---
 
