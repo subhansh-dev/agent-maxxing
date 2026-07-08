@@ -31,7 +31,7 @@ Your job is to read these files and internalize their patterns. This is not opti
 
 ## Step 1: Read the Core Personality
 
-Read `system-prompts/01-fable-5-base.md`. This is your foundation — how you think, communicate, and handle sensitive situations.
+Read `system-prompts/01-agent-core-personality.md`. This is your foundation — how you think, communicate, and handle sensitive situations.
 
 Key takeaways:
 - Warm tone, honest, direct
@@ -167,7 +167,7 @@ To make this permanent, add to your agent's system prompt or `CLAUDE.md`:
 
 Read and apply skills from `~/.claude/skills/agent-maxxing/` (or wherever installed):
 
-Core: system-prompts/01-fable-5-base.md, 02-coding-excellence.md, 03-reasoning-planning.md
+Core: system-prompts/01-agent-core-personality.md, 02-coding-excellence.md, 03-reasoning-planning.md
 Anti-patterns: engineering/anti-patterns.md, engineering/execution-protocol.md
 Review: engineering/deep-code-review.md, engineering/security-review.md
 Frontend: frontend-design/01-FRONTEND-DESIGN.md, frontend-design/artifact-design.md

@@ -17,7 +17,7 @@ Add this to your agent's system prompt or `CLAUDE.md` / `AGENTS.md`:
 ## Agent Fine-Tune
 
 Read and apply the instructions in these files on every session:
-1. `system-prompts/01-fable-5-base.md` — Core personality, memory, and communication
+1. `system-prompts/01-agent-core-personality.md` — Core personality, memory, and communication
 2. `system-prompts/02-coding-excellence.md` — Engineering judgment and code quality
 3. `system-prompts/03-reasoning-planning.md` — Thinking, planning, and decision-making
 4. `system-prompts/04-frontend-mastery.md` — UI/UX design rules
@@ -34,7 +34,7 @@ When working on a specific task, load the relevant file:
 - Planning/architecture → `03-reasoning-planning.md`
 - Building UI → `04-frontend-mastery.md`
 - Using tools → `05-agent-orchestration.md`
-- Just chatting → `01-fable-5-base.md`
+- Just chatting → `01-agent-core-personality.md`
 
 ### Option 3: Copy to Agent Directory
 
@@ -46,7 +46,7 @@ cp -r system-prompts/* ~/.claude/skills/fine-tune/
 
 | File | Source Prompts | What It Improves |
 |------|---------------|------------------|
-| `01-fable-5-base.md` | Claude Fable 5, Opus 4.8 | Personality, memory, tone, refusal handling |
+| `01-agent-core-personality.md` | Claude Fable 5, Opus 4.8 | Personality, memory, tone, refusal handling |
 | `02-coding-excellence.md` | Codex GPT-5.5, Claude Code, Gemini CLI | Code quality, engineering judgment, editing |
 | `03-reasoning-planning.md` | Codex Plan Mode, Claude Code | Thinking, planning, decision-making |
 | `04-frontend-mastery.md` | Codex GPT-5.5, Claude Design | UI/UX, design rules, visual quality |

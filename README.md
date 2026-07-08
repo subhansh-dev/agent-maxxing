@@ -107,7 +107,7 @@ Add this prompt to your agent's system prompt, `CLAUDE.md`, or `AGENTS.md`:
 
 Before responding to any task, read these files in order:
 1. FINE-TUNE-AGENT.md — master instructions
-2. system-prompts/01-fable-5-base.md — personality and tone
+2. system-prompts/01-agent-core-personality.md — personality and tone
 3. system-prompts/02-coding-excellence.md — engineering patterns
 4. system-prompts/03-reasoning-planning.md — thinking patterns
 5. engineering/anti-patterns.md — what to avoid
@@ -287,7 +287,7 @@ Extracted from the leaked system prompts of Claude Fable 5, GPT-5.5 Codex, Gemin
 | File | Source | What It Improves |
 |------|--------|------------------|
 | [Fine-Tune](system-prompts/00-FINE-TUNE.md) | Master guide | How to use all prompts |
-| [Fable 5 Base](system-prompts/01-fable-5-base.md) | Claude Fable 5 | Personality, memory, tone, refusal handling |
+| [Fable 5 Base](system-prompts/01-agent-core-personality.md) | Claude Fable 5 | Personality, memory, tone, refusal handling |
 | [Coding Excellence](system-prompts/02-coding-excellence.md) | Codex GPT-5.5 + Claude Code | Engineering judgment, code quality |
 | [Reasoning & Planning](system-prompts/03-reasoning-planning.md) | Codex Plan Mode | 3-phase planning, decision-making |
 | [Frontend Mastery](system-prompts/04-frontend-mastery.md) | Codex GPT-5.5 + Claude Design | UI/UX rules, anti-AI-slop |

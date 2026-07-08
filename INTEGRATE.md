@@ -117,7 +117,7 @@ find ~/.claude/skills/agent-maxxing -name "*.md" | wc -l
 
 # Check key files exist
 ls ~/.claude/skills/agent-maxxing/FINE-TUNE-AGENT.md
-ls ~/.claude/skills/agent-maxxing/system-prompts/01-fable-5-base.md
+ls ~/.claude/skills/agent-maxxing/system-prompts/01-agent-core-personality.md
 ls ~/.claude/skills/agent-maxxing/engineering/anti-patterns.md
 ```
 
