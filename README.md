@@ -291,7 +291,9 @@ agent-skills/
     └── 06-tone-communication.md
 ```
 
-**9 folders. 85+ files. Zero dependencies. Just `.md` files your agent reads.**
+**9 folders. 95+ files. Zero dependencies. Just `.md` files your agent reads.**
+
+> **New?** Start with [`FINE-TUNE-AGENT.md`](FINE-TUNE-AGENT.md) — the master instruction file that tells your agent how to use everything in this repo.
 
 ---
 
