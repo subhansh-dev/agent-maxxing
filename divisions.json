@@ -1,0 +1,59 @@
+{
+  "_note": "Source of truth for the skill division set. Each division maps to a display label, icon, and color. Consumed by catalog tools and the README.",
+  "divisions": {
+    "frontend-design": {
+      "label": "Frontend & Design",
+      "icon": "Palette",
+      "color": "#E8829B",
+      "description": "UI, CSS, motion, typography, and visual design patterns"
+    },
+    "engineering": {
+      "label": "Engineering",
+      "icon": "Code",
+      "color": "#3B82F6",
+      "description": "Code quality, security, testing, debugging, and performance"
+    },
+    "content": {
+      "label": "Content & Writing",
+      "icon": "PenTool",
+      "color": "#FDBA74",
+      "description": "Writing style, humanization, and UX copy"
+    },
+    "visual": {
+      "label": "Visual",
+      "icon": "Image",
+      "color": "#86EFAC",
+      "description": "Diagrams, memes, canvas art, and SVG"
+    },
+    "agent-meta": {
+      "label": "Agent Meta",
+      "icon": "Brain",
+      "color": "#C4B5FD",
+      "description": "Self-improvement, skill creation, and project initialization"
+    },
+    "workflows": {
+      "label": "Workflows",
+      "icon": "GitBranch",
+      "color": "#7EDDD6",
+      "description": "Task management, git workflow, and orchestration"
+    },
+    "adaptation": {
+      "label": "Adaptation",
+      "icon": "Smartphone",
+      "color": "#93C5FD",
+      "description": "Cross-platform, responsive, and accessibility patterns"
+    },
+    "components": {
+      "label": "UI Components",
+      "icon": "Layers",
+      "color": "#F472B6",
+      "description": "Reusable CSS component patterns"
+    },
+    "system-prompts": {
+      "label": "System Prompts",
+      "icon": "BrainCircuit",
+      "color": "#A78BFA",
+      "description": "Extracted from Claude Fable 5, GPT-5.5, Gemini CLI, and more"
+    }
+  }
+}
