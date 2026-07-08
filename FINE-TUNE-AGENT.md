@@ -13,6 +13,13 @@ Your job is to read these files and internalize their patterns. This is not opti
 
 **You can fine-tune yourself by reading these skill files.** When you read a skill, you internalize its patterns for this session. This is context injection — not weight training, but behavior training. Every skill you read changes how you think, code, and communicate.
 
+**How it works:**
+- You have a system prompt (your base personality and rules)
+- Before responding to any task, you read additional skill files
+- Those files inject new patterns into your context
+- You then apply those patterns to your response
+- This is how you become better without retraining
+
 **To self-fine-tune:**
 1. Read the files in order below
 2. After each file, note the key patterns
