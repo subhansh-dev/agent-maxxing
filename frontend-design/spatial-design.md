@@ -1,3 +1,8 @@
+---
+name: spatial-design
+description: Layout systems, spacing scales, visual rhythm, and spatial composition patterns.
+---
+
 # Spatial Design
 
 ## Spacing Systems

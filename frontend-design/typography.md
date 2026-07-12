@@ -1,3 +1,8 @@
+---
+name: typography
+description: Font pairing, type scales, vertical rhythm, and typographic hierarchy systems.
+---
+
 # Typography
 
 ## Classic Typography Principles

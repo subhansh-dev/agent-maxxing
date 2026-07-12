@@ -1,5 +1,5 @@
 ---
-name: fine-tune-agent
+name: fine-tune
 description: Master instructions for fine-tuning your AI agent's personality, reasoning, coding, and communication capabilities using extracted patterns from the world's best system prompts.
 ---
 

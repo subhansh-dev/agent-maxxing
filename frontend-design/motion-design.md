@@ -1,3 +1,8 @@
+---
+name: motion-design
+description: Timing, easing, duration rules, and enter/exit animation patterns for UI motion.
+---
+
 # Motion Design
 
 ## Duration: The 100/300/500 Rule

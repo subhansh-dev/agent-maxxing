@@ -1,3 +1,8 @@
+---
+name: excalidraw-patterns
+description: Excalidraw JSON templates and patterns for hand-drawn style diagrams.
+---
+
 # Excalidraw Patterns
 
 Envelope:

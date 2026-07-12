@@ -1,3 +1,8 @@
+---
+name: responsive-design
+description: Breakpoints, fluid layouts, mobile-first approach, and responsive design patterns.
+---
+
 # Responsive Design
 
 ## Mobile-First: Write It Right

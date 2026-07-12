@@ -1,3 +1,8 @@
+---
+name: color-and-contrast
+description: Color theory, OKLCH usage, contrast ratios, and accessibility standards for UI design.
+---
+
 # Color & Contrast
 
 ## Color Spaces: Use OKLCH

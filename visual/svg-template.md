@@ -1,3 +1,8 @@
+---
+name: svg-template
+description: HTML templates for generating SVG-based diagrams and visualizations.
+---
+
 # SVG HTML Template
 
 Copy this to a `.html` file and replace `<!-- SVG -->`.

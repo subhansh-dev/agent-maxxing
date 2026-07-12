@@ -1,3 +1,8 @@
+---
+name: interaction-design
+description: Micro-interactions, hover states, interactive states, and engagement patterns for UI.
+---
+
 # Interaction Design
 
 ## The Eight Interactive States
