@@ -41,30 +41,34 @@ describe('YAML Frontmatter', () => {
 
   for (const dir of skillDirs) {
     const dirPath = join(ROOT, dir);
-    let files;
+    let skillFiles;
     try {
-      files = readdirSync(dirPath).filter(f => f.endsWith('.md'));
+      skillFiles = walkMd(dirPath);
     } catch {
       continue;
     }
 
-    for (const file of files) {
-      it(`${dir}/${file} has valid YAML frontmatter with name and description`, () => {
-        const content = readFileSync(join(dirPath, file), 'utf-8');
+    for (const filePath of skillFiles) {
+      const rel = filePath.replace(ROOT + '\\', '').replace(ROOT + '/', '');
+      it(`${rel} has valid YAML frontmatter with name and description`, () => {
+        const content = readFileSync(filePath, 'utf-8');
         const fm = parseFrontmatter(content);
-        assert.ok(fm, `${dir}/${file} missing YAML frontmatter (--- delimiters)`);
-        assert.ok(fm.name, `${dir}/${file} missing 'name' in frontmatter`);
-        assert.ok(fm.description, `${dir}/${file} missing 'description' in frontmatter`);
-        assert.ok(fm.name.length > 0, `${dir}/${file} has empty 'name'`);
-        assert.ok(fm.description.length > 10, `${dir}/${file} 'description' too short (<10 chars)`);
+        assert.ok(fm, `${rel} missing YAML frontmatter (--- delimiters)`);
+        assert.ok(fm.name, `${rel} missing 'name' in frontmatter`);
+        assert.ok(fm.description, `${rel} missing 'description' in frontmatter`);
+        assert.ok(fm.name.length > 0, `${rel} has empty 'name'`);
+        assert.ok(fm.description.length > 10, `${rel} 'description' too short (<10 chars)`);
       });
     }
   }
 
   it('root-level skill docs have frontmatter where applicable', () => {
-    const rootDocs = ['FINE-TUNE-AGENT.md', 'INTEGRATE.md', 'PROMPT-FINE-TUNE.md', 'PROMPT-INTEGRATE.md'];
+    const rootDocs = ['FINE-TUNE-AGENT', 'INTEGRATE', 'PROMPT-FINE-TUNE', 'PROMPT-INTEGRATE'];
     for (const doc of rootDocs) {
-      const content = readFileSync(join(ROOT, doc), 'utf-8');
+      const skillPath = join(ROOT, doc, 'SKILL.md');
+      const flatPath = join(ROOT, doc + '.md');
+      const filePath = statSync(skillPath, { throwIfNoEntry: false }) !== undefined ? skillPath : flatPath;
+      const content = readFileSync(filePath, 'utf-8');
       const fm = parseFrontmatter(content);
       assert.ok(fm, `${doc} missing frontmatter`);
       assert.ok(fm.name || fm.description, `${doc} has frontmatter but no name/description`);

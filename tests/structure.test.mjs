@@ -27,7 +27,16 @@ function listDirs(dir) {
 }
 
 function listFiles(dir, ext) {
-  return readdirSync(dir).filter(f => extname(f) === ext);
+  const results = [];
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    if (statSync(full).isDirectory()) {
+      results.push(...listFiles(full, ext));
+    } else if (extname(entry) === ext) {
+      results.push(entry);
+    }
+  }
+  return results;
 }
 
 describe('Directory structure', () => {
@@ -80,24 +89,37 @@ describe('Skill file counts', () => {
 });
 
 describe('Required root files', () => {
-  const required = [
-    'README.md', 'LICENSE', 'CONTRIBUTING.md', 'SECURITY.md',
+  const requiredFiles = [
+    'LICENSE',
     'divisions.json', 'tools.json', 'package.json',
-    '00-INDEX.md', '00-OVERVIEW.md',
-    'FINE-TUNE-AGENT.md', 'INTEGRATE.md',
     'PROMPT-FINE-TUNE.md', 'PROMPT-INTEGRATE.md'
   ];
 
-  for (const file of required) {
+  const requiredDirs = [
+    'README', 'CONTRIBUTING', 'SECURITY',
+    '00-INDEX', '00-OVERVIEW',
+    'FINE-TUNE-AGENT', 'INTEGRATE'
+  ];
+
+  for (const file of requiredFiles) {
     it(`has ${file}`, () => {
       assert.doesNotThrow(() => statSync(join(ROOT, file)), `${file} not found`);
+    });
+  }
+
+  for (const dir of requiredDirs) {
+    it(`has ${dir}/ directory with SKILL.md`, () => {
+      const dirPath = join(ROOT, dir);
+      const skillPath = join(dirPath, 'SKILL.md');
+      assert.doesNotThrow(() => statSync(dirPath), `${dir}/ directory not found`);
+      assert.doesNotThrow(() => statSync(skillPath), `${dir}/SKILL.md not found`);
     });
   }
 });
 
 describe('README accuracy', () => {
   it('README claims match actual file counts (±10 tolerance)', () => {
-    const readme = readFileSync(join(ROOT, 'README.md'), 'utf-8');
+    const readme = readFileSync(join(ROOT, 'README', 'SKILL.md'), 'utf-8');
 
     const skillCount = countFiles(ROOT, '.md') - 5;
     const skillMatch = readme.match(/Skills-(\d+)/);

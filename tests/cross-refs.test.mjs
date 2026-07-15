@@ -44,8 +44,12 @@ describe('Internal markdown links', () => {
           continue;
         }
         const target = resolve(fileDir, link.href);
+        const targetExists = statSync(target, { throwIfNoEntry: false }) !== undefined;
+        // Also check if it's a directory with SKILL.md inside (directory-based skill structure)
+        const dirWithSkill = resolve(fileDir, link.href.replace(/\.md$/, ''), 'SKILL.md');
+        const dirSkillExists = statSync(dirWithSkill, { throwIfNoEntry: false }) !== undefined;
         assert.ok(
-          statSync(target, { throwIfNoEntry: false }) !== undefined,
+          targetExists || dirSkillExists,
           `broken link: [${link.text}](${link.href}) in ${rel}`
         );
       }
